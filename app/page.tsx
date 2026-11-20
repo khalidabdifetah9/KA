@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useContext } from "react";
 import AboutMe from "@/components/aboutMe/aboutme";
 import Projects from "@/components/projects/projects";
@@ -10,7 +10,10 @@ export default function Home() {
     <section
       className={`min-h-screen font-poppins w-full ${themeData?.light ? "bg-white text-black" : "bg-black text-white"} transition-all duration-700  sm:px-10 flex flex-col lg:flex-row lg:items-start`}
     >
-      <div className="w-full p-4 sm:p-10 border-b border-black/15 lg:sticky lg:top-0 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:border-b-0 lg:border-r">
+      <div
+        data-lenis-prevent
+        className="w-full p-4 sm:p-10 border-b border-black/15 lg:sticky lg:top-0 lg:h-screen lg:w-2/5 lg:overflow-y-auto lg:border-b-0 lg:border-r [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         <AboutMe />
       </div>
       <div className="w-full lg:w-3/5">
