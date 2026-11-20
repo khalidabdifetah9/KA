@@ -1,14 +1,16 @@
 "use client";
 import React, { useContext } from "react";
+import LiveClock from "./LiveClock";
 import Link from "next/link";
 import { ThemeContext } from "@/context/ThemeContext";
 import Image from "next/image";
+
 const AboutMe = () => {
   const themeData = useContext(ThemeContext);
   return (
-    <section className="flex flex-col w-full space-y-5">
-      <div className="flex justify-between">
-        <div>
+    <section className="flex flex-col w-full space-y-4 text-sm sm:text-base">
+      <div className="flex justify-between gap-4">
+        <div className="shrink-0">
           <button
             className={`${themeData?.light ? "opacity-100" : "opacity-40"} cursor-pointer`}
             onClick={() => themeData?.setLight(true)}
@@ -23,29 +25,35 @@ const AboutMe = () => {
             DARK
           </button>
         </div>
-        <div>
-          <p>TEXT ONE</p>
-          <p>TEXT TWO</p>
+        <div className="text-right">
+          <LiveClock />
         </div>
       </div>
-      <div className="flex space-x-3">
-        <div className="relative w-27 h-27 ">
+
+      <div className="flex items-center space-x-3 sm:items-start">
+        <div className="relative h-20 w-20 shrink-0 sm:h-27 sm:w-27">
           <Image
             src={"/images/profile.png"}
             alt="Developer Image"
+            sizes="(max-width: 640px) 80px, 108px"
             fill
             priority
             className="object-cover rounded-2xl"
           ></Image>
         </div>
-        <div className="pt-10">
-          <p className="text-lg">Kalid Abdifeta</p>
-          <p className="opacity-85">WEB DESIGNER AND FULL STACK DEVELOPER</p>
+        <div className="sm:pt-10">
+          <p className="text-base sm:text-lg">Kalid Abdifeta</p>
+          <p className="text-xs opacity-85 sm:text-base">
+            WEB DESIGNER AND FULL STACK DEVELOPER
+          </p>
         </div>
       </div>
+
       <div>
-        <h1 className="opacity-65 text-lg mb-6">{"[ About Me ]"}</h1>
-        <p className="text-lg">
+        <h1 className="opacity-65 text-base sm:text-lg mb-4 sm:mb-6">
+          {"[ About Me ]"}
+        </h1>
+        <p>
           Basically, I write code, break things, fix things, and somehow call it
           a career.
           <br />
@@ -65,27 +73,37 @@ const AboutMe = () => {
           pretending &quot;one last adjustment&quot; means one last adjustment.
         </p>
       </div>
+
       <div>
-        <h1 className="opacity-65 text-lg mb-6">{"[ Achivements ]"}</h1>
-        <div className="flex opacity-85 justify-between">
-          <h2>Degree</h2>
-          <h2>In Batchler&apos;s of Computer Science</h2>
-        </div>
-        <div className="flex opacity-85 justify-between">
-          <h2>Completed Projects</h2>
-          <h2>More Than 10</h2>
-        </div>
-        <div className="flex opacity-85 justify-between">
-          <h2>Replit Expert</h2>
-          <h2>On Contra</h2>
-        </div>
-        <div className="flex opacity-85 justify-between">
-          <h2>Qualified AI Web Trainer</h2>
-          <h2>Classified</h2>
+        <h1 className="opacity-65 text-base sm:text-lg mb-4 sm:mb-6">
+          {"[ Achivements ]"}
+        </h1>
+        <div className="flex flex-col gap-3 opacity-85">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+            <h2 className="opacity-70 sm:opacity-100">Degree</h2>
+            <h2 className="sm:text-right">
+              In Batchler&apos;s of Computer Science
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+            <h2 className="opacity-70 sm:opacity-100">Completed Projects</h2>
+            <h2 className="sm:text-right">More Than 10</h2>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+            <h2 className="opacity-70 sm:opacity-100">Replit Expert</h2>
+            <h2 className="sm:text-right">On Contra</h2>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+            <h2 className="opacity-70 sm:opacity-100">
+              Qualified AI Web Trainer
+            </h2>
+            <h2 className="sm:text-right">Classified</h2>
+          </div>
         </div>
       </div>
+
       <div>
-        <h1 className="opacity-65 text-lg mb-4">{"[ Links ]"}</h1>
+        <h1 className="opacity-65 text-base sm:text-lg mb-4">{"[ Links ]"}</h1>
         <Link className="uppercase opacity-85" href={""}>
           GitHub
         </Link>
