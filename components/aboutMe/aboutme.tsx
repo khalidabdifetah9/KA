@@ -33,13 +33,14 @@ const AboutMe = () => {
       <div className="flex items-center space-x-3 sm:items-start">
         <div className="relative h-20 w-20 shrink-0 sm:h-27 sm:w-27">
           <Image
-            src={"/images/profile.png"}
+            src={"/images/profile.avif"}
             alt="Developer Image"
-            sizes="(max-width: 640px) 80px, 108px"
             fill
             priority
+            quality={100}
+            sizes="(max-width: 640px) 240px, 320px"
             className="object-cover rounded-2xl"
-          ></Image>
+          />
         </div>
         <div className="sm:pt-10">
           <p className="text-base sm:text-lg">Kalid Abdifeta</p>
@@ -104,7 +105,11 @@ const AboutMe = () => {
 
       <div>
         <h1 className="opacity-65 text-base sm:text-lg mb-4">{"[ Links ]"}</h1>
-        <Link className="uppercase opacity-85" href={""}>
+        <Link
+          target="_blank"
+          className="uppercase opacity-85"
+          href={"https://github.com/khalidabdifetah9"}
+        >
           GitHub
         </Link>
       </div>
