@@ -62,7 +62,7 @@ const AboutMe = () => {
           I&apos;m a Full Stack Developer. I make computers do things,
           occasionally make them stop doing things, and then spend 3 hours
           figuring out why. I work with React, Next.js, TypeScript, Node.js,
-          PostgreSQL, Tailwind CSS,Framer Motion and more. I design interfaces,
+          PostgreSQL, Tailwind CSS, Framer Motion and more. I design interfaces,
           build applications, connect APIs, and make buttons that actually work
           (a surprisingly rare achievement).
           <br />
@@ -77,13 +77,13 @@ const AboutMe = () => {
 
       <div>
         <h1 className="opacity-65 text-base sm:text-lg mb-4 sm:mb-6">
-          {"[ Achivements ]"}
+          {"[ Achievements ]"}
         </h1>
         <div className="flex flex-col gap-3 opacity-85">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
             <h2 className="opacity-70 sm:opacity-100">Degree</h2>
             <h2 className="sm:text-right">
-              In Batchler&apos;s of Computer Science
+              Bachelor&apos;s in Computer Science
             </h2>
           </div>
           <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
